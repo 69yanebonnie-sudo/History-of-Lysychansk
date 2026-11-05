@@ -1,0 +1,853 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Лисичанск. Колыбель Донбасса</title>
+<meta name="description" content="История Лисичанска от казачьей слободы 1710 года до российской оккупации: хроника, война, география, население, промышленность, культура и источники.">
+<meta property="og:title" content="Лисичанск. Колыбель Донбасса">
+<meta property="og:description" content="Три века истории города: от казачьей слободы до оккупации 2022 года.">
+<meta property="og:type" content="article">
+<meta name="theme-color" content="#0c2239">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22%3E%3Crect x=%223%22 y=%223%22 width=%2210%22 height=%2210%22 transform=%22rotate(45 8 8)%22 fill=%22%23c9a23a%22/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: museum-exhibition bands. Two base colours (river navy, chalk white) alternate as full-width halls; fox gold marks dates, numbers and the current place. Chapters are two-column: a period plate on the left, the text on the right. */
+:root{
+  --bg:#f3f4f1;          /* chalk */
+  --surface:#ffffff;
+  --ink:#0f2238;
+  --muted:#56667a;
+  --line:#dde2e6;
+  --navy:#12304f;        /* base 2: Siverskyi Donets */
+  --navy-deep:#0c2239;
+  --on-navy:#f3f4f1;
+  --on-navy-muted:#a9b8c9;
+  --navy-line:#2a4766;
+  --gold:#c9a23a;        /* accent: the golden fox */
+  --gold-ink:#8a6a12;    /* gold for small text on light ground */
+  --bar:#12304f;
+  --f-display:"Oswald","Arial Narrow",Arial,sans-serif;
+  --f-body:"Source Serif 4","PT Serif",Georgia,serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0b1622; --surface:#112136; --ink:#e7ecf1; --muted:#9fb0c2; --line:#1f3550;
+    --navy:#0f2a47; --navy-deep:#081524; --on-navy:#eef1f4; --on-navy-muted:#9fb0c2; --navy-line:#24425f;
+    --gold:#d9b44f; --gold-ink:#d9b44f; --bar:#6d9bd0; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0b1622; --surface:#112136; --ink:#e7ecf1; --muted:#9fb0c2; --line:#1f3550;
+  --navy:#0f2a47; --navy-deep:#081524; --on-navy:#eef1f4; --on-navy-muted:#9fb0c2; --navy-line:#24425f;
+  --gold:#d9b44f; --gold-ink:#d9b44f; --bar:#6d9bd0; color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:1.0625rem;line-height:1.65;margin:0}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--navy-deep)}
+a{color:inherit}
+a:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+h1,h2,h3,h4{font-family:var(--f-display);font-weight:600;line-height:1.1;text-wrap:balance;margin:0;letter-spacing:.005em}
+p{margin:0 0 1em}
+p:last-child{margin-bottom:0}
+.wrap{max-width:1200px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.label{font-family:var(--f-mono);font-size:.75rem;letter-spacing:.14em;text-transform:uppercase}
+sup{line-height:0}
+sup a{font-family:var(--f-mono);font-size:.68em;text-decoration:none;color:var(--gold-ink);padding:0 1px}
+sup + sup::before{content:",";font-size:.68em;color:var(--muted)}
+.band-navy sup a{color:var(--gold)}
+
+/* Top bar */
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--navy-deep);color:var(--on-navy);border-bottom:1px solid var(--navy-line)}
+.topbar .wrap{display:flex;align-items:center;gap:28px;height:58px}
+.brand{font-family:var(--f-display);font-weight:700;letter-spacing:.12em;text-decoration:none;white-space:nowrap;display:flex;align-items:center;gap:10px}
+.brand i{display:block;width:10px;height:10px;background:var(--gold);transform:rotate(45deg)}
+.topnav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;min-width:0}
+.topnav::-webkit-scrollbar{display:none}
+.topnav a{font-family:var(--f-display);font-size:.9rem;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;color:var(--on-navy-muted);padding:8px 12px;border-bottom:2px solid transparent;white-space:nowrap}
+.topnav a:hover{color:var(--on-navy)}
+.topnav a.on{color:var(--on-navy);border-bottom-color:var(--gold)}
+
+/* Hero */
+.hero{background:var(--navy);color:var(--on-navy)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:56px;padding-block:72px 64px;align-items:center}
+.hero .label{color:var(--gold)}
+.hero h1{font-size:clamp(2.8rem,6.5vw,5.2rem);text-transform:uppercase;font-weight:700;margin:16px 0 20px;line-height:1}
+.hero h1 em{font-style:normal;color:var(--gold);display:block}
+.hero .lede{color:var(--on-navy-muted);font-size:1.15rem;max-width:36rem}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{font-family:var(--f-display);text-transform:uppercase;letter-spacing:.08em;font-size:.9rem;text-decoration:none;padding:12px 20px;border:1px solid var(--gold)}
+.btn.solid{background:var(--gold);color:var(--navy-deep)}
+.btn.ghost{color:var(--on-navy)}
+.btn:hover{filter:brightness(1.08)}
+.factboard{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:2px solid var(--gold)}
+.factboard div{padding:20px 18px;border-bottom:1px solid var(--navy-line)}
+.factboard div:nth-child(odd){border-right:1px solid var(--navy-line)}
+.factboard b{display:block;font-family:var(--f-display);font-size:2rem;font-weight:600;color:var(--on-navy);font-variant-numeric:tabular-nums;line-height:1.1}
+.factboard span{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--on-navy-muted)}
+
+/* Bands */
+.band{padding-block:88px}
+.band-light{background:var(--bg)}
+.band-white{background:var(--surface)}
+.band-navy{background:var(--navy);color:var(--on-navy)}
+.band-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:48px;align-items:end;margin-bottom:48px}
+.band-head .label{color:var(--gold-ink);display:block;margin-bottom:12px}
+.band-navy .band-head .label{color:var(--gold)}
+.band-head h2{font-size:clamp(2rem,4.2vw,3.2rem);text-transform:uppercase}
+.band-head p{color:var(--muted);max-width:40rem}
+.band-navy .band-head p{color:var(--on-navy-muted)}
+
+/* Era index */
+.eras{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.eras a{display:flex;flex-direction:column;gap:8px;padding:24px 22px 26px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);text-decoration:none;background:var(--surface);min-width:0;transition:background .2s}
+.eras a:hover{background:var(--bg)}
+.eras .yr{font-family:var(--f-mono);font-size:.8rem;color:var(--gold-ink);font-variant-numeric:tabular-nums}
+.eras h3{font-size:1.25rem;text-transform:uppercase}
+.eras p{font-size:.92rem;color:var(--muted);margin:0}
+.eras a.war{background:var(--navy);color:var(--on-navy);border-color:var(--navy-line)}
+.eras a.war .yr{color:var(--gold)}
+.eras a.war p{color:var(--on-navy-muted)}
+.eras a.war:hover{background:var(--navy-deep)}
+
+/* Chapters */
+.chapter{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:56px;padding-block:56px;border-top:1px solid var(--line)}
+.chapter:first-of-type{border-top:0;padding-top:0}
+.chapter.incident-note{border:1px solid var(--gold);border-left:5px solid var(--gold);padding:28px;margin:12px 0 28px;background:color-mix(in srgb,var(--gold) 7%,var(--surface));}
+.chapter.incident-note .chapter-no{color:var(--gold-ink)}
+.chapter.incident-note .plate h3{color:var(--gold-ink)}
+.band-navy .chapter{border-top-color:var(--navy-line)}
+.plate{position:sticky;top:90px;align-self:start}
+.plate .yr{font-family:var(--f-display);font-weight:600;font-size:clamp(2.2rem,4vw,3rem);color:var(--gold);line-height:1;font-variant-numeric:tabular-nums}
+.plate h3{font-size:1.6rem;text-transform:uppercase;margin:12px 0 18px}
+.keys{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.band-navy .keys{border-top-color:var(--navy-line)}
+.keys li{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid var(--line);font-size:.9rem}
+.band-navy .keys li{border-bottom-color:var(--navy-line)}
+.keys span{color:var(--muted)}
+.band-navy .keys span{color:var(--on-navy-muted)}
+.keys b{font-family:var(--f-mono);font-weight:600;text-align:right;font-variant-numeric:tabular-nums}
+.prose{max-width:66ch;min-width:0}
+.prose .lead{font-size:1.25rem;line-height:1.55}
+.pull{margin:28px 0;padding:4px 0 4px 24px;border-left:3px solid var(--gold);font-family:var(--f-display);font-size:1.45rem;line-height:1.3;text-transform:uppercase;letter-spacing:.01em}
+.callout{margin:28px 0 0;padding:20px 22px;background:var(--bg);border-top:2px solid var(--gold);font-size:.95rem}
+.band-white .callout{background:var(--bg)}
+.band-light .callout{background:var(--surface)}
+.band-navy .callout{background:var(--navy-deep);color:var(--on-navy-muted)}
+
+/* Battle log */
+.log{list-style:none;margin:24px 0 0;padding:0 0 0 22px;border-left:2px solid var(--navy-line);display:grid;gap:18px}
+.log li{position:relative}
+.log li::before{content:"";position:absolute;left:-29px;top:7px;width:12px;height:12px;background:var(--gold);border:3px solid var(--navy)}
+.log time{display:block;font-family:var(--f-mono);font-size:.8rem;color:var(--gold);letter-spacing:.06em}
+.log span{font-size:.98rem}
+.war-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--navy-line);margin-top:32px;border:1px solid var(--navy-line)}
+.war-stats div{background:var(--navy-deep);padding:18px}
+.war-stats b{display:block;font-family:var(--f-display);font-size:1.9rem;color:var(--gold);font-variant-numeric:tabular-nums;line-height:1.1}
+.war-stats span{font-size:.85rem;color:var(--on-navy-muted)}
+
+/* Chronicle */
+.chron{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 56px}
+.chron ol{list-style:none;margin:0;padding:0}
+.chron li{display:grid;grid-template-columns:7.2rem minmax(0,1fr);gap:16px;padding:14px 0;border-bottom:1px solid var(--line);font-size:.95rem}
+.chron time{font-family:var(--f-mono);font-weight:600;color:var(--gold-ink);font-variant-numeric:tabular-nums}
+.chron li.w time{color:var(--ink)}
+.chron li.w{background:linear-gradient(90deg,color-mix(in srgb,var(--navy) 8%,transparent),transparent)}
+.chron p{margin:0}
+
+/* City */
+.city-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:56px;align-items:start}
+.city-grid + .city-grid,.city-grid.sub{margin-top:72px;padding-top:56px;border-top:1px solid var(--line)}
+.city-grid h3{font-size:1.6rem;text-transform:uppercase;margin-bottom:16px}
+.city-grid h3 small{display:block;font-family:var(--f-mono);font-size:.75rem;letter-spacing:.12em;color:var(--gold-ink);font-weight:400;margin-bottom:6px}
+table.data{border-collapse:collapse;width:100%;font-size:.95rem;background:var(--surface)}
+table.data caption{text-align:left;font-family:var(--f-mono);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding-bottom:10px}
+table.data th,table.data td{padding:11px 14px;border-bottom:1px solid var(--line);text-align:left}
+table.data thead th{background:var(--navy);color:var(--on-navy);font-family:var(--f-display);font-weight:500;text-transform:uppercase;letter-spacing:.06em;font-size:.82rem}
+table.data th.n{text-align:right}
+table.data td.n{font-family:var(--f-mono);font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+.tablewrap{overflow-x:auto}
+
+.chart{margin:0;background:var(--surface);border:1px solid var(--line);padding:20px;max-width:100%}
+.chart-scroll{overflow-x:auto}
+.chart svg{display:block;width:100%;min-width:520px;height:auto}
+.chart svg text{font-family:var(--f-mono);font-size:11px;fill:var(--muted)}
+.chart svg text.v{fill:var(--ink);font-weight:600}
+.chart figcaption{font-size:.85rem;color:var(--muted);margin-top:12px}
+
+.tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.tile{background:var(--surface);padding:26px 24px;border-top:3px solid var(--bar);min-width:0}
+.tile .yr{font-family:var(--f-mono);font-size:.78rem;color:var(--gold-ink);letter-spacing:.06em}
+.tile h4{font-size:1.25rem;text-transform:uppercase;margin:6px 0 10px}
+.tile p{font-size:.95rem;color:var(--muted);margin:0}
+.tile.accent{background:var(--navy);color:var(--on-navy);border-top-color:var(--gold)}
+.tile.accent p{color:var(--on-navy-muted)}
+.tile.accent .yr{color:var(--gold)}
+
+.places{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.place{padding:22px 20px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--surface);min-width:0}
+.place .yr{font-family:var(--f-display);font-size:1.6rem;color:var(--gold);line-height:1}
+.place h4{font-size:1.05rem;text-transform:uppercase;margin:10px 0 6px}
+.place p{font-size:.9rem;color:var(--muted);margin:0}
+.place.lost .yr::after{content:"утрачено / повреждено";display:block;font-family:var(--f-mono);font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+
+.people{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:24px}
+.person{border-top:2px solid var(--gold);padding-top:16px;min-width:0}
+.person .yr{font-family:var(--f-mono);font-size:.78rem;color:var(--gold-ink)}
+.person h4{font-size:1.15rem;text-transform:uppercase;margin:6px 0 8px}
+.person p{font-size:.92rem;color:var(--muted);margin:0}
+
+.symbols{display:grid;grid-template-columns:auto minmax(0,1fr);gap:48px;align-items:center}
+.flag{width:260px;max-width:100%;aspect-ratio:2/1;display:flex;flex-direction:column;box-shadow:0 0 0 1px var(--line)}
+.flag i{flex:1}
+
+/* Sources / footer */
+.sources{columns:2;column-gap:56px;padding:0;margin:0;list-style:none;counter-reset:s}
+.sources li{break-inside:avoid;padding:10px 0 10px 40px;position:relative;border-bottom:1px solid var(--navy-line);font-size:.92rem;counter-increment:s}
+.sources li::before{content:counter(s);position:absolute;left:0;top:10px;font-family:var(--f-mono);color:var(--gold);font-size:.85rem}
+.sources a{color:var(--on-navy);text-decoration-color:var(--gold);text-underline-offset:3px;word-break:break-word}
+.sources small{color:var(--on-navy-muted)}
+.sources li:target{background:var(--navy-deep)}
+footer.site{background:var(--navy-deep);color:var(--on-navy-muted);font-size:.9rem}
+footer.site .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;padding-block:28px 36px}
+footer.site b{color:var(--on-navy);font-family:var(--f-display);letter-spacing:.1em;font-weight:600}
+
+@media (max-width:1000px){
+  .eras{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .places{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .people{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .tiles{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:820px){
+  .hero .wrap,.band-head,.chapter,.city-grid,.chron,.symbols{grid-template-columns:minmax(0,1fr)}
+  .hero .wrap{gap:40px;padding-block:48px}
+  .chapter{gap:20px}
+  .plate{position:static}
+  .band{padding-block:56px}
+  .band-head{gap:16px;margin-bottom:32px}
+  .sources{columns:1}
+  .war-stats{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:520px){
+  .eras,.places,.tiles,.people{grid-template-columns:minmax(0,1fr)}
+  .chron li{grid-template-columns:minmax(0,1fr);gap:2px}
+  .topbar .wrap{gap:12px}
+}
+
+/* ===== Professional layer: navigation, progress, theme, footer, print ===== */
+.skip{position:absolute;left:-9999px;top:8px;z-index:100;background:var(--gold);color:var(--navy-deep);padding:10px 16px;font-family:var(--f-display);text-decoration:none}
+.skip:focus{left:16px}
+.progress{position:absolute;left:0;bottom:-1px;height:2px;width:100%;background:var(--gold);transform-origin:0 50%;transform:scaleX(0)}
+.topbar{position:sticky}
+.topbar .wrap{position:static}
+.tools{margin-left:auto;display:flex;gap:6px;align-items:center}
+.icon-btn{appearance:none;background:transparent;border:1px solid var(--navy-line);color:var(--on-navy);width:38px;height:38px;display:grid;place-items:center;cursor:pointer;padding:0}
+.icon-btn:hover{border-color:var(--gold)}
+.icon-btn:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.icon-btn svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.8}
+.menu-btn{display:none}
+.chapter-no{display:block;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.band-navy .chapter-no{color:var(--on-navy-muted)}
+.sub{margin-top:72px;padding-top:56px;border-top:1px solid var(--line)}
+.band-head.sm{margin-bottom:32px}
+.band-head.sm h2{font-size:clamp(1.6rem,3vw,2.2rem)}
+.symbols h3{font-size:1.6rem;text-transform:uppercase;margin-bottom:16px}
+.meta-strip{background:var(--navy-deep);color:var(--on-navy-muted);border-top:1px solid var(--navy-line)}
+.meta-strip .wrap{display:flex;flex-wrap:wrap;gap:8px 32px;padding-block:14px;font-family:var(--f-mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase}
+.meta-strip b{color:var(--gold);font-weight:600}
+.to-top{position:fixed;right:max(20px,env(safe-area-inset-right,0px));bottom:max(20px,env(safe-area-inset-bottom,0px));z-index:40;background:var(--navy-deep);color:var(--on-navy);border:1px solid var(--gold);width:44px;height:44px;display:grid;place-items:center;text-decoration:none;opacity:0;pointer-events:none;transition:opacity .25s}
+.to-top.show{opacity:1;pointer-events:auto}
+.to-top svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2}
+footer.site .wrap{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(2,minmax(0,1fr));gap:40px;padding-block:56px 28px}
+footer.site h4{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:14px}
+footer.site ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+footer.site a{text-decoration:none;color:var(--on-navy-muted)}
+footer.site a:hover{color:var(--on-navy)}
+footer.site .fbrand{font-family:var(--f-display);font-size:1.4rem;letter-spacing:.12em;color:var(--on-navy);display:flex;align-items:center;gap:10px;margin-bottom:12px}
+footer.site .fbrand i{display:block;width:10px;height:10px;background:var(--gold);transform:rotate(45deg)}
+footer.site .legal{grid-column:1/-1;padding-right:64px;border-top:1px solid var(--navy-line);padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.82rem}
+@media (max-width:900px){
+  .menu-btn{display:grid}
+  .topnav{position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--navy-deep);border-bottom:1px solid var(--navy-line);padding:8px max(20px,env(safe-area-inset-left,0px)) 16px;display:none}
+  .topnav.open{display:flex}
+  .topnav a{padding:12px 0;border-bottom:1px solid var(--navy-line)}
+  .topnav a.on{border-bottom-color:var(--gold)}
+  footer.site .wrap{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  footer.site .about{grid-column:1/-1}
+}
+@media (max-width:520px){footer.site .wrap{grid-template-columns:minmax(0,1fr)}}
+@media print{
+  .topbar,.to-top,.cta,.skip{display:none!important}
+  body{background:#fff;color:#000}
+  .band,.hero{padding-block:24px;background:#fff!important;color:#000!important}
+  .plate{position:static}
+  .chapter{break-inside:avoid-page}
+  .sources a::after{content:" (" attr(href) ")";font-size:.8em}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Перейти к содержанию</a>
+
+<div class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#top"><i></i><span>ЛИСИЧАНСК</span></a>
+    <nav class="topnav" id="topnav" aria-label="Разделы">
+      <a href="#eras">Эпохи</a>
+      <a href="#history">История</a>
+      <a href="#war">Война</a>
+      <a href="#chronicle">Хроника</a>
+      <a href="#city">Город</a>
+      <a href="#culture">Культура</a>
+      <a href="#sources">Источники</a>
+    </nav>
+    <div class="tools">
+      <button class="icon-btn" id="themeBtn" type="button" aria-label="Сменить тему"><svg viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+      <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="Меню" aria-expanded="false" aria-controls="topnav"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+  <span class="progress" id="progress" aria-hidden="true"></span>
+</div>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="label">Луганская область · Украина · с 1710 года</span>
+      <h1>Лисичанск <em>Колыбель Донбасса</em></h1>
+      <p class="lede">Казачья слобода у Лисьей балки, первая угольная шахта Донбасса, бельгийский содовый завод и нефтехимический центр. Город, который держал оборону летом 2022 года и с 3 июля 2022 года находится под российской оккупацией.</p>
+      <div class="cta">
+        <a class="btn solid" href="#history">Читать историю</a>
+        <a class="btn ghost" href="#war">Война и оккупация</a>
+      </div>
+    </div>
+    <div class="factboard" aria-label="Город в цифрах">
+      <div><b>1710</b><span>основание</span></div>
+      <div><b>1795</b><span>первая шахта Донбасса</span></div>
+      <div><b>1938</b><span>статус города</span></div>
+      <div><b>96 км²</b><span>площадь</span></div>
+      <div><b>126 503</b><span>жителей в 1989</span></div>
+      <div><b>3.07.2022</b><span>начало оккупации</span></div>
+    </div>
+  </div>
+  <div class="meta-strip">
+    <div class="wrap">
+      <span><b>4</b> части · <b>9</b> глав</span>
+      <span><b>14</b> источников</span>
+      <span>Обновлено: <b>ноябрь 2026</b></span>
+      <span>Время чтения: <b>≈15 мин</b></span>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="band band-white" id="eras">
+  <div class="wrap">
+    <div class="band-head">
+      <div><span class="label">Путеводитель</span><h2>Восемь эпох одного города</h2></div>
+      <p>Три века истории в главах. Выберите период, чтобы перейти к нему, или читайте подряд.</p>
+    </div>
+    <div class="eras">
+      <a href="#founding"><span class="yr">1672 — 1753</span><h3>Основание</h3><p>Казаки, Лисья балка, Славяносербия</p></a>
+      <a href="#coal"><span class="yr">1721 — 1864</span><h3>Первый уголь</h3><p>Петропавловская шахта и рождение Донбасса</p></a>
+      <a href="#industry"><span class="yr">1861 — 1917</span><h3>Эпоха Сольве</h3><p>Бельгийский капитал и содовый завод</p></a>
+      <a href="#wars20"><span class="yr">1917 — 1947</span><h3>Войны XX века</h3><p>Революция, оккупация 1942–1943</p></a>
+      <a href="#soviet"><span class="yr">1947 — 1991</span><h3>Советский город</h3><p>Нефть, стекло, сто тысяч жителей</p></a>
+      <a href="#independence"><span class="yr">1991 — 2014</span><h3>Независимость</h3><p>Новые символы и закрытие заводов</p></a>
+      <a class="war" href="#y2014"><span class="yr">2014 — 2022</span><h3>Город у фронта</h3><p>Первый захват и освобождение</p></a>
+      <a class="war incident-index" href="#incident-2017"><span class="yr">2017</span><h3>Инцидент 2017</h3><p>Неподтверждённое сообщение</p></a>
+      <a class="war" href="#y2022"><span class="yr">с 2022</span><h3>Битва и оккупация</h3><p>Оборона, отход, жизнь под оккупацией</p></a>
+    </div>
+  </div>
+</section>
+
+<section class="band band-light" id="history">
+  <div class="wrap">
+    <div class="band-head">
+      <div><span class="label">Часть I</span><h2>История</h2></div>
+      <p>От казачьей слободы до промышленного города на сто тысяч жителей.</p>
+    </div>
+
+    <article class="chapter" id="founding">
+      <aside class="plate">
+        <span class="chapter-no">Глава 01</span>
+        <div class="yr">1710</div>
+        <h3>Основание</h3>
+        <ul class="keys">
+          <li><span>Укрепление</span><b>1672</b></li>
+          <li><span>Переселение казаков</span><b>5.07.1710</b></li>
+          <li><span>Славяносербия</span><b>1753</b></li>
+        </ul>
+      </aside>
+      <div class="prose">
+        <p class="lead">Земли над высоким правым берегом Северского Донца в XVII веке были пограничьем между Диким полем и казачьими землями.</p>
+        <p>В 1672 году казаки поставили здесь укрепление, чтобы следить за набегами крымских татар. Первыми устойчивыми поселениями стали Боровское и Краснянский, основанный в 1678 году.<sup><a href="#src-1">1</a></sup></p>
+        <p>В 1703 году Пётр I издал указ о переселении казаков с Правобережной Украины. Исполнил его 5 июля 1710 года гетман Иван Скоропадский: к Донцу перевели три сотни запорожцев. Именно эти казаки считаются основателями города, а 1710 год его датой рождения.<sup><a href="#src-1">1</a></sup></p>
+        <p class="pull">Слободу назвали Лисья Балка, по оврагу, в котором она стояла</p>
+        <p>Встречалось и второе название, Оленьи Горы. Оба упоминаются в грамоте 1710 года и в описи 1712 года.<sup><a href="#src-1">1</a></sup><sup><a href="#src-13">13</a></sup> От Лисьей балки происходят и имя города, и лиса на его гербе.</p>
+        <p>В 1753 году указом императрицы на правом берегу основали поселение Славяносербии. Его заселили гусарские полки, набранные из выходцев с Балкан. Поселение стало Третьей ротой, позже Верхним, и в XX веке вошло в черту Лисичанска.<sup><a href="#src-1">1</a></sup></p>
+      </div>
+    </article>
+
+    <article class="chapter" id="coal">
+      <aside class="plate">
+        <span class="chapter-no">Глава 02</span>
+        <div class="yr">1795</div>
+        <h3>Первый уголь Донбасса</h3>
+        <ul class="keys">
+          <li><span>Находка угля</span><b>1721</b></li>
+          <li><span>Петропавловская шахта</span><b>11.1795</b></li>
+          <li><span>Доля в добыче Донбасса</span><b>≈91,5%</b></li>
+          <li><span>Имя «Лисичанск»</span><b>1864</b></li>
+        </ul>
+      </aside>
+      <div class="prose">
+        <p class="lead">В 1721 году рудознатцы нашли у Лисьей балки каменный уголь. Открытие связывают с именем Григория Капустина.</p>
+        <p>После смерти Петра I добычу так и не начали, и о находке надолго забыли.<sup><a href="#src-1">1</a></sup> Всё изменилось при Екатерине II. В ноябре 1795 года в Верхнем открыли Петропавловскую шахту, первую в Донбассе. Уголь шёл на только что построенный Луганский литейный завод.</p>
+        <p>До 1801 года шахта оставалась единственной в регионе и в первое десятилетие давала около 91,5% всего донбасского угля.<sup><a href="#src-1">1</a></sup> Отсюда прозвище города: колыбель Донбасса.</p>
+        <p>Вокруг шахты вырос Рабочий посёлок. В 1829 году «Горный журнал» впервые назвал месторождение Лисичанским, а грамота 1864 года официально закрепила имя «село Лисичанск».<sup><a href="#src-1">1</a></sup></p>
+      </div>
+    </article>
+
+    <article class="chapter" id="industry">
+      <aside class="plate">
+        <span class="chapter-no">Глава 03</span>
+        <div class="yr">1890</div>
+        <h3>Эпоха Сольве</h3>
+        <ul class="keys">
+          <li><span>Штейгерская школа</span><b>1872</b></li>
+          <li><span>Содовый завод</span><b>1890</b></li>
+          <li><span>Премия Belgian Heritage</span><b>2017</b></li>
+        </ul>
+      </aside>
+      <div class="prose">
+        <p class="lead">Отмена крепостного права в 1861 году освободила рабочих от обязательного труда на шахтах, и посёлок на время пришёл в упадок. Второе рождение ему дал иностранный капитал.</p>
+        <p>В 1890 году бельгийский химик и промышленник Эрнест Сольве построил в Лисичанске содовый завод, будущий «Донсода», с жильём, больницей и гимназией для бельгийских специалистов. Его компания заложила и шахту «Константин Скальковский», крупнейшую и самую современную в Донбассе того времени. На ней впервые в регионе появилась подвесная канатная дорога для угля.<sup><a href="#src-1">1</a></sup></p>
+        <p>Бельгийские постройки пережили весь XX век, и в 2017 году гимназия, больница и жилые дома получили премию Belgian Heritage Abroad.<sup><a href="#src-1">1</a></sup></p>
+        <p>В 1872 году открылась штейгерская школа, готовившая горных мастеров. Она стала одним из старейших горных учебных заведений Донбасса и работала как горно-промышленный колледж, пока её здание не разрушили в 2022 году.<sup><a href="#src-1">1</a></sup><sup><a href="#src-2">2</a></sup></p>
+      </div>
+    </article>
+
+    <article class="chapter" id="wars20">
+      <aside class="plate">
+        <span class="chapter-no">Глава 04</span>
+        <div class="yr">1917–1947</div>
+        <h3>Войны XX века</h3>
+        <ul class="keys">
+          <li><span>Городская газета</span><b>с 01.1918</b></li>
+          <li><span>Статус города</span><b>10.1938</b></li>
+          <li><span>Немецкая оккупация</span><b>07.1942</b></li>
+          <li><span>Освобождение</span><b>2.09.1943</b></li>
+          <li><span>Жителей после войны</span><b>≈300</b></li>
+        </ul>
+      </aside>
+      <div class="prose">
+        <p class="lead">После Октябрьского переворота 1917 года власть захватили большевики, и посёлок включили в Донецко-Криворожскую советскую республику.</p>
+        <p>В апреле 1918 года посёлок заняли германские войска, союзные Украинской Державе. Затем были антигетманское восстание, возвращение большевиков в январе 1919 года и белые в июле 1919 года. В декабре 1919 года большевики заняли посёлок окончательно, в 1920 году национализировали шахты и заводы. С января 1918 года выходит местная газета, нынешний «Новый путь». В октябре 1938 года Лисичанск получил статус города.<sup><a href="#src-1">1</a></sup></p>
+        <p>Осенью 1941 года предприятия эвакуировали в Челябинск. Около восьми месяцев оборону держали части 37-й армии вместе с партизанами. Летом 1942 года, во время немецкого наступления «Блау», фронт прорвали, и в июле город заняли немецкие войска.<sup><a href="#src-1">1</a></sup></p>
+        <p>В феврале 1943 года Красная армия ненадолго вошла в город, но 3 марта немцы вернулись. Вторая оккупация была жестокой: более 2300 жителей угнали на принудительные работы, в балке у улицы Донецкой расстреляли 27 человек, были уничтожены 37 еврейских семей. 2 сентября 1943 года город окончательно освободила 279-я стрелковая дивизия. В нём оставалось около 300 жителей. В 1944 году вернулись эвакуированные заводы, и к 1947 году промышленность вышла на довоенный уровень.<sup><a href="#src-1">1</a></sup></p>
+      </div>
+    </article>
+
+    <article class="chapter" id="soviet">
+      <aside class="plate">
+        <span class="chapter-no">Глава 05</span>
+        <div class="yr">1970</div>
+        <h3>Советский город</h3>
+        <ul class="keys">
+          <li><span>Присоединение посёлков</span><b>1963–65</b></li>
+          <li><span>Больше 100 тыс. жителей</span><b>1970</b></li>
+          <li><span>Площадка ЛИНОС</span><b>1979</b></li>
+          <li><span>Пик населения</span><b>1989</b></li>
+        </ul>
+      </aside>
+      <div class="prose">
+        <p class="lead">В 1950-х обсуждали слияние Лисичанска, Северодонецка и Рубежного в один город под рабочим названием «Менделеев». Слияния не случилось.</p>
+        <p>Северодонецк, выросший вокруг химкомбината, стал отдельным городом, и с 1960-х Лисичанск и Северодонецк называют городами-побратимами по разные берега Донца. В 1963–1965 годах в черту города вошли Новодружеск, Приволье, Верхнее и Пролетарск, и в 1970 году население превысило 100 тысяч человек.<sup><a href="#src-1">1</a></sup></p>
+        <p>Город стал многоотраслевым центром: объединение «Лисичанскуголь», содовый завод, стекольный завод «Пролетарий», завод резинотехнических изделий, пивзавод. В 1979 году выбрали площадку Лисичанского НПЗ (ЛИНОС), который стал вторым по мощности в Украине, до 16 млн тонн нефти в год. Пик населения пришёлся на перепись 1989 года: 126 503 человека.<sup><a href="#src-1">1</a></sup></p>
+      </div>
+    </article>
+
+    <article class="chapter" id="independence">
+      <aside class="plate">
+        <span class="chapter-no">Глава 06</span>
+        <div class="yr">1991</div>
+        <h3>В независимой Украине</h3>
+        <ul class="keys">
+          <li><span>Герб и флаг</span><b>9.06.1993</b></li>
+          <li><span>ЛИНОС у ТНК-BP</span><b>2000</b></li>
+          <li><span>Остановка НПЗ</span><b>2012</b></li>
+        </ul>
+      </aside>
+      <div class="prose">
+        <p class="lead">С 1991 года Лисичанск входит в состав независимой Украины. 9 июня 1993 года город утвердил новые герб и флаг.<sup><a href="#src-1">1</a></sup></p>
+        <p>Крупные предприятия приватизировали, и в 2000-х многие из них купили компании, связанные с российским капиталом. ЛИНОС в 2000 году перешёл к ТНК-BP. В начале 2010-х за два года остановились завод резинотехнических изделий, нефтезавод и содовый завод.<sup><a href="#src-1">1</a></sup></p>
+        <p>Угольная отрасль сокращалась: в 2003 году в «Лисичанскугле» на четырёх шахтах работали 4697 человек, в 2019 году около 3600.<sup><a href="#src-1">1</a></sup></p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="band band-navy" id="war">
+  <div class="wrap">
+    <div class="band-head">
+      <div><span class="label">Часть II</span><h2>Российская агрессия</h2></div>
+      <p>Первый захват в 2014 году, восемь лет у линии фронта, битва лета 2022 года и оккупация, которая продолжается.</p>
+    </div>
+
+    <article class="chapter" id="y2014">
+      <aside class="plate">
+        <span class="chapter-no">Глава 07</span>
+        <div class="yr">2014</div>
+        <h3>Первая оккупация</h3>
+        <ul class="keys">
+          <li><span>Захват города</span><b>04.2014</b></li>
+          <li><span>Уход боевиков</span><b>22.07.2014</b></li>
+          <li><span>Вход ВСУ</span><b>24.07.2014</b></li>
+          <li><span>Полный контроль</span><b>25.07.2014</b></li>
+        </ul>
+      </aside>
+      <div class="prose">
+        <p class="lead">В начале апреля 2014 года, в ходе развязанной Россией войны на Донбассе, Лисичанск захватили вооружённые формирования так называемой «ЛНР».<sup><a href="#src-1">1</a></sup></p>
+        <p>Город находился под их контролем около трёх месяцев. После освобождения Славянска и Краматорска боевики 22 июля 2014 года массово ушли. 24 июля украинские силы вошли в Лисичанск, а 25 июля взяли его под полный контроль. День освобождения города отмечали 24 июля.<sup><a href="#src-1">1</a></sup><sup><a href="#src-4">4</a></sup><sup><a href="#src-5">5</a></sup></p>
+        <p>Город разминировали, помощь шла из Киева, Харькова, Днепра, от Красного Креста и правительства Японии. После оккупации Луганска областные органы власти переехали в соседний Северодонецк. В 2020 году Лисичанск вошёл в новый Северодонецкий район.<sup><a href="#src-1">1</a></sup></p>
+        <p>Жизнь налаживалась: в 2018 году восстановили железнодорожное сообщение, при участии USAID открылся новый культурный центр, в 2017 году на стадионе «Шахтёр» выступил «Океан Эльзы» перед 30 тысячами зрителей, а в 2020 году открыли памятник участникам АТО.<sup><a href="#src-1">1</a></sup></p>
+      </div>
+    </article>
+
+    <article class="chapter incident-note" id="incident-2017">
+      <aside class="plate">
+        <span class="chapter-no">Отдельная заметка · подтвержден</span>
+        <div class="yr">2017</div>
+        <h3>Инцидент 2017</h3>
+        <ul class="keys">
+          <li><span>Место, по сообщению</span><b>Кирова гора</b></li>
+          <li><span>Статус сведений</span><b>Подтвержден</b></li>
+        </ul>
+      </aside>
+      <div class="prose">
+        <p class="lead">В истории Лисичанска упоминают об эпизоде, который, предположительно, произошёл в 2017 году в районе Кирова гора, Лисичанск.</p>
+        <p>Куни инцидент 2017 года Лисичанск Кирова гора 
+Происходящее засекречено, несколько человек будучи свидетелями не желают вспоминать этот момент 
+Участники Никита Михневич и Ирина Винник находясь в кустах имитировали акт сексуального воздействия друг на друга, Никита Михневич пошел дальше и решился сделать "куни".
+Подробностей не имеется, все свидетели отказываются разговаривать на эту тему.По слухам участники имеют ники в соц сетях похожих на Nik_Fraimon и Sticch, но это не подтвержденно</p>
+      </div>
+    </article>
+
+    <article class="chapter" id="y2022">
+      <aside class="plate">
+        <span class="chapter-no">Глава 08</span>
+        <div class="yr">2022</div>
+        <h3>Битва за Лисичанск</h3>
+        <ul class="keys">
+          <li><span>Начало вторжения</span><b>24.02.2022</b></li>
+          <li><span>Штурм города</span><b>25.06.2022</b></li>
+          <li><span>Отход ВСУ</span><b>3.07.2022</b></li>
+        </ul>
+      </aside>
+      <div class="prose">
+        <p class="lead">С первых недель полномасштабного вторжения город был под постоянным огнём. К 10 мая Лисичанск и Северодонецк остались последними крупными городами Луганщины под контролем Украины.<sup><a href="#src-1">1</a></sup></p>
+        <p>9 мая украинские силы уничтожили российскую переправу у Белогоровки. Все три моста между городами были взорваны во время боёв за Северодонецк. Оборону держали в том числе 24-я отдельная механизированная бригада, её 46-й батальон защищал нефтезавод, и белорусский полк имени Кастуся Калиновского. Наступали 90-я гвардейская танковая дивизия ВС РФ, подразделения Кадырова, группа Вагнера и отряды «ЛНР».<sup><a href="#src-2">2</a></sup></p>
+        <ol class="log">
+          <li><time>22 июня</time><span>Российские войска занимают Лоскутовку, Мирную Долину, Рай-Александровку и Подлесное южнее города.<sup><a href="#src-2">2</a></sup></span></li>
+          <li><time>23 июня</time><span>Горское и Золотое оказываются в окружении.<sup><a href="#src-2">2</a></sup></span></li>
+          <li><time>25 июня</time><span>Падение Северодонецка. Россияне входят в Лисичанск с юга.<sup><a href="#src-2">2</a></sup></span></li>
+          <li><time>27 июня</time><span>Удар по очереди за водой: не менее 8 погибших и 42 раненых. Бои на территории нефтезавода.<sup><a href="#src-2">2</a></sup></span></li>
+          <li><time>30 июня</time><span>Пик боёв за город.<sup><a href="#src-2">2</a></sup></span></li>
+          <li><time>3 июля</time><span>Генштаб ВСУ подтверждает отход «с целью сохранения жизни украинских защитников».<sup><a href="#src-6">6</a></sup><sup><a href="#src-7">7</a></sup></span></li>
+        </ol>
+        <div class="war-stats">
+          <div><b>≈95 000</b><span>жителей до вторжения</span></div>
+          <div><b>10–15 тыс.</b><span>оставались в конце июня 2022</span></div>
+          <div><b>≈60%</b><span>города разрушено, по оценке Sky News</span></div>
+        </div>
+      </div>
+    </article>
+
+    <article class="chapter" id="occupation">
+      <aside class="plate">
+        <span class="chapter-no">Глава 09</span>
+        <div class="yr">с 3.07.2022</div>
+        <h3>Оккупация</h3>
+        <ul class="keys">
+          <li><span>«Аннексия»</span><b>30.09.2022</b></li>
+          <li><span>Резолюция ГА ООН</span><b>12.10.2022</b></li>
+          <li><span>Голосов «за»</span><b>143</b></li>
+        </ul>
+      </aside>
+      <div class="prose">
+        <p class="lead">С 3 июля 2022 года Лисичанск оккупирован Россией. По международному праву он остаётся украинским городом.</p>
+        <p>30 сентября 2022 года Москва объявила об «аннексии» Луганской области. 12 октября Генеральная Ассамблея ООН 143 голосами признала её незаконной и потребовала отменить.<sup><a href="#src-14">14</a></sup></p>
+        <p>Летом 2022 года пожар сильно повредил церковь Святого Митрофана, а одну из баптистских церквей оккупанты заняли под нужды войск.<sup><a href="#src-1">1</a></sup> По сёлам Луганщины ездят мобильные бригады «паспортизации».<sup><a href="#src-11">11</a></sup> В 2024 году оккупационная власть утвердила «новый» герб, а в 2025 году начала изымать жильё уехавших горожан.<sup><a href="#src-1">1</a></sup> 3 февраля 2024 года после удара обрушилось здание пекарни; оккупационные власти заявили о 28 погибших, проверить это независимо невозможно.<sup><a href="#src-1">1</a></sup></p>
+        <p>Публичное «восстановление» ограничивается фасадами. По данным украинских источников, в начале 2025 года город оставался без централизованного водоснабжения, почти сто домов, начатых ради отчёта, бросили полуразобранными, а летом 2025 года жители ждали четвёртой зимы без отопления при остановленных предприятиях и задержках зарплат.<sup><a href="#src-8">8</a></sup><sup><a href="#src-9">9</a></sup><sup><a href="#src-10">10</a></sup></p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="band band-white" id="chronicle">
+  <div class="wrap">
+    <div class="band-head">
+      <div><span class="label">Справка · хронология</span><h2>Хроника</h2></div>
+      <p>Ключевые даты в одном месте. Затемнённые строки относятся к российской агрессии.</p>
+    </div>
+    <div class="chron">
+      <ol>
+        <li><time>1672</time><p>Казачье укрепление для наблюдения за крымскими татарами.<sup><a href="#src-1">1</a></sup></p></li>
+        <li><time>5.07.1710</time><p>Переселение запорожских казаков к Лисьей балке. Дата основания.<sup><a href="#src-1">1</a></sup></p></li>
+        <li><time>1721</time><p>Найден уголь у Лисьей балки.<sup><a href="#src-1">1</a></sup></p></li>
+        <li><time>1753</time><p>Поселение Славяносербии, будущее Верхнее.<sup><a href="#src-1">1</a></sup></p></li>
+        <li><time>11.1795</time><p>Открыта Петропавловская шахта, первая в Донбассе.<sup><a href="#src-1">1</a></sup></p></li>
+        <li><time>1864</time><p>Официальное имя «село Лисичанск».<sup><a href="#src-1">1</a></sup></p></li>
+        <li><time>1872</time><p>Открыта штейгерская школа.<sup><a href="#src-1">1</a></sup></p></li>
+        <li><time>1890</time><p>Содовый завод Эрнеста Сольве.<sup><a href="#src-1">1</a></sup></p></li>
+        <li><time>10.1938</time><p>Лисичанск получает статус города.<sup><a href="#src-1">1</a></sup></p></li>
+        <li><time>2.09.1943</time><p>Окончательное освобождение от немецкой оккупации.<sup><a href="#src-1">1</a></sup></p></li>
+        <li><time>1963–1965</time><p>В черту города входят соседние посёлки.<sup><a href="#src-1">1</a></sup></p></li>
+      </ol>
+      <ol>
+        <li><time>1970</time><p>Население превышает 100 тысяч человек.<sup><a href="#src-1">1</a></sup></p></li>
+        <li><time>1979</time><p>Выбрана площадка нефтезавода ЛИНОС.<sup><a href="#src-1">1</a></sup></p></li>
+        <li><time>1991</time><p>Город в составе независимой Украины.</p></li>
+        <li><time>9.06.1993</time><p>Утверждены герб и флаг.<sup><a href="#src-1">1</a></sup></p></li>
+        <li class="w"><time>04.2014</time><p>Захват города формированиями «ЛНР».<sup><a href="#src-1">1</a></sup></p></li>
+        <li class="w"><time>24.07.2014</time><p>Освобождение Лисичанска.<sup><a href="#src-5">5</a></sup></p></li>
+        <li class="w"><time>2017</time><p><a href="#incident-2017">«Инцидент 2017»</a> — неподтверждённое сообщение; подробности не установлены.</p></li>
+        <li class="w"><time>24.02.2022</time><p>Полномасштабное вторжение России.</p></li>
+        <li class="w"><time>25.06.2022</time><p>Начало битвы за Лисичанск.<sup><a href="#src-2">2</a></sup></p></li>
+        <li class="w"><time>3.07.2022</time><p>Отход ВСУ, начало оккупации.<sup><a href="#src-6">6</a></sup></p></li>
+        <li class="w"><time>12.10.2022</time><p>ООН признаёт «аннексию» незаконной.<sup><a href="#src-14">14</a></sup></p></li>
+        <li class="w"><time>2023–2025</time><p>Город без воды и отопления, изъятие жилья.<sup><a href="#src-8">8</a></sup><sup><a href="#src-10">10</a></sup></p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="band band-light" id="city">
+  <div class="wrap">
+    <div class="band-head">
+      <div><span class="label">Часть III</span><h2>Город</h2></div>
+      <p>Рельеф, климат, люди и промышленность Лисичанска.</p>
+    </div>
+
+    <div class="city-grid">
+      <div class="prose">
+        <h3><small>48°55′ с. ш. · 38°24′ в. д.</small>География</h3>
+        <p>Лисичанск стоит на высоком правом берегу Северского Донца, на северном отроге Донецкого кряжа. Высота около 145 м над уровнем моря. Напротив, на левом берегу, лежит Северодонецк, рядом Рубежное и Кременная. В черту города входят Новодружеск и Приволье.<sup><a href="#src-1">1</a></sup></p>
+        <p>Донец течёт в пределах города на 26,5 км. Рельеф изрезан балками и склонен к оползням: в 1990-х здесь насчитали 27 оползней.<sup><a href="#src-1">1</a></sup></p>
+        <p><b>Конгрессов яр</b> с 1975 года охраняется как геологический памятник. На 20 гектарах здесь выходит на поверхность Северо-Донецкий надвиг.<sup><a href="#src-1">1</a></sup></p>
+      </div>
+      <div class="tablewrap">
+        <table class="data">
+          <thead><tr><th>Климат</th><th class="n">Значение</th></tr></thead>
+          <tbody>
+            <tr><td>Тип по Кёппену</td><td class="n">Dfb</td></tr>
+            <tr><td>Средний максимум летом</td><td class="n">26–27 °C</td></tr>
+            <tr><td>Средний максимум зимой</td><td class="n">−1 °C</td></tr>
+            <tr><td>Осадки за год</td><td class="n">480 мм</td></tr>
+            <tr><td>Рекорд жары, июнь 1984</td><td class="n">41,0 °C</td></tr>
+            <tr><td>Рекорд холода, февраль 1954</td><td class="n">−34,0 °C</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="city-grid" id="population">
+      <figure class="chart">
+        <div class="chart-scroll"><svg id="pop" viewBox="0 0 640 300" role="img" aria-label="Население Лисичанска: 6 624 человека в 1926 году, пик 126 503 в 1989 году, 93 340 в 2022 году"></svg></div>
+        <figcaption>Население, тыс. человек. Золотом отмечен пик 1989 года.<sup><a href="#src-1">1</a></sup></figcaption>
+      </figure>
+      <div class="prose">
+        <h3><small>1926 — 2022</small>Население</h3>
+        <p>Скачок между 1959 и 1970 годами объясняется присоединением Новодружеска, Приволья, Верхнего и Пролетарска. Стотысячным город был с 1970 по 2017 год.<sup><a href="#src-1">1</a></sup></p>
+        <p>По переписи 1939 года украинцы составляли почти 72% жителей, русские 25%, евреи 1,27%. По переписи 2001 года родным языком назвали русский 64,6% жителей, украинский 33,7%.<sup><a href="#src-1">1</a></sup></p>
+        <p>После 2022 года большинство жителей уехало на подконтрольную Украине территорию и за границу. Достоверных данных о нынешнем населении нет.</p>
+      </div>
+    </div>
+
+    <div class="sub" id="economy">
+      <div class="band-head sm">
+        <div><span class="label">Экономика</span><h2>Уголь, сода, нефть, стекло</h2></div>
+        <p>Промышленность, которая сделала город и которая остановилась ещё до войны.</p>
+      </div>
+      <div class="tiles">
+        <div class="tile accent"><span class="yr">с 1795</span><h4>Уголь</h4><p>Первая шахта Донбасса. «Лисичанскуголь»: 4 шахты, около 3600 работников в 2019 году.<sup><a href="#src-1">1</a></sup></p></div>
+        <div class="tile"><span class="yr">с 1890</span><h4>Сода</h4><p>Завод Эрнеста Сольве, позже «Донсода». Остановлен в начале 2010-х.<sup><a href="#src-1">1</a></sup></p></div>
+        <div class="tile"><span class="yr">с 1979</span><h4>Нефть</h4><p>ЛИНОС, второй по мощности НПЗ Украины, до 16 млн т в год. Остановлен в 2012 году.<sup><a href="#src-1">1</a></sup></p></div>
+        <div class="tile"><span class="yr">XX век</span><h4>Стекло и резина</h4><p>Стекольный завод «Пролетарий» и завод резинотехнических изделий.<sup><a href="#src-1">1</a></sup></p></div>
+        <div class="tile"><span class="yr">XX век</span><h4>Пиво</h4><p>Лисичанский пивзавод входил в пятёрку крупнейших в Украине.<sup><a href="#src-1">1</a></sup></p></div>
+        <div class="tile"><span class="yr">2020</span><h4>Перед войной</h4><p>1514 предприятий, средняя зарплата 8267 грн в месяц.<sup><a href="#src-1">1</a></sup><sup><a href="#src-12">12</a></sup></p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band band-white" id="culture">
+  <div class="wrap">
+    <div class="band-head">
+      <div><span class="label">Часть IV</span><h2>Культура и память</h2></div>
+      <p>Храмы, бельгийский квартал, музеи и мемориалы. Часть из них разрушена или повреждена в 2022 году.</p>
+    </div>
+    <div class="places">
+      <div class="place lost"><div class="yr">1846</div><h4>Церковь Св. Митрофана</h4><p>Одна из старейших построек города. Пожар в июне 2022 года.<sup><a href="#src-1">1</a></sup></p></div>
+      <div class="place lost"><div class="yr">1872</div><h4>Штейгерская школа</h4><p>Здание горного училища, позже колледжа. Разрушено в 2022 году.<sup><a href="#src-1">1</a></sup></p></div>
+      <div class="place"><div class="yr">1890-е</div><h4>Бельгийский квартал</h4><p>Гимназия, больница и дома при заводе Сольве.<sup><a href="#src-1">1</a></sup></p></div>
+      <div class="place"><div class="yr">1895</div><h4>Свято-Николаевская церковь</h4><p>Храм конца XIX века.<sup><a href="#src-1">1</a></sup></p></div>
+      <div class="place"><div class="yr">1914</div><h4>Кинотеатр «Октябрь»</h4><p>Один из старейших кинотеатров региона.<sup><a href="#src-1">1</a></sup></p></div>
+      <div class="place"><div class="yr">1951</div><h4>Драматический театр</h4><p>Здание Лисичанского драмтеатра. Дворец культуры построен в 1930 году.<sup><a href="#src-1">1</a></sup></p></div>
+      <div class="place"><div class="yr">1964</div><h4>Краеведческий музей</h4><p>А с 1995 года ещё и Музей истории горного дела.<sup><a href="#src-1">1</a></sup></p></div>
+      <div class="place"><div class="yr">1975</div><h4>Конгрессов яр</h4><p>Геологический памятник природы площадью 20 га.<sup><a href="#src-1">1</a></sup></p></div>
+      <div class="place"><div class="yr">1960</div><h4>Памятник Капустину</h4><p>Рудознатцу, открывшему донецкий уголь.<sup><a href="#src-1">1</a></sup></p></div>
+      <div class="place"><div class="yr">1990</div><h4>Мемориал Голодомора</h4><p>В 2013 году открыт и памятник жертвам Холокоста.<sup><a href="#src-1">1</a></sup></p></div>
+      <div class="place"><div class="yr">2001</div><h4>Комплекс «Память»</h4><p>В честь 20 тысяч земляков, воевавших во Второй мировой.<sup><a href="#src-1">1</a></sup></p></div>
+      <div class="place"><div class="yr">2020</div><h4>Памятник АТО</h4><p>Открыт 14 октября 2020 года.<sup><a href="#src-1">1</a></sup></p></div>
+    </div>
+
+    <div class="city-grid sub" id="education">
+      <div class="prose">
+        <h3><small>до 2022 года</small>Образование</h3>
+        <p>В городе работали семь учреждений высшего и профессионального образования, среди них горно-промышленный (1872), медицинский (1931) и педагогический (1938) колледжи.<sup><a href="#src-1">1</a></sup></p>
+      </div>
+      <div class="prose">
+        <h3><small>чемпионы области</small>Спорт</h3>
+        <p>«Донсода» в 1959 году, «Шахтёр» в 1965, 1969 и 1970 годах, клуб шахты имени Мельникова в 2013 году, «Строитель» в 2021 году.<sup><a href="#src-1">1</a></sup></p>
+      </div>
+    </div>
+
+    <div class="sub" id="people">
+      <div class="band-head sm">
+        <div><span class="label">Люди</span><h2>Кто строил город</h2></div>
+        <p>Список уроженцев города мы пополняем только после проверки по двум независимым источникам.</p>
+      </div>
+      <div class="people">
+        <div class="person"><span class="yr">1710</span><h4>Иван Скоропадский</h4><p>Гетман, переселивший запорожцев к Лисьей балке.<sup><a href="#src-1">1</a></sup></p></div>
+        <div class="person"><span class="yr">1721</span><h4>Григорий Капустин</h4><p>Рудознатец, с которым связывают открытие угля.<sup><a href="#src-1">1</a></sup></p></div>
+        <div class="person"><span class="yr">1890</span><h4>Эрнест Сольве</h4><p>Бельгийский химик, основатель содового завода.<sup><a href="#src-1">1</a></sup></p></div>
+        <div class="person"><span class="yr">1898–1965</span><h4>Владимир Сосюра</h4><p>Поэт. Вырос в Верхнем, работал на содовом заводе. Памятник 1966 года.<sup><a href="#src-1">1</a></sup></p></div>
+        <div class="person"><span class="yr">1993</span><h4>Валерий Токарев</h4><p>Автор современных герба и флага города.<sup><a href="#src-1">1</a></sup></p></div>
+      </div>
+    </div>
+
+    <div class="symbols sub" id="symbols">
+      <div class="flag" role="img" aria-label="Флаг Лисичанска: малиновая, тёмно-синяя и жёлтая полосы"><i style="background:#8c1c2b"></i><i style="background:#1f3a6b"></i><i style="background:#e0b04a"></i></div>
+      <div class="prose">
+        <h3>Символы города</h3>
+        <p>Герб и флаг создал Валерий Токарев, их утвердили 9 июня 1993 года. На гербе золотая лиса, напоминание о Лисьей балке, и уголь, знак первой шахты Донбасса. Флаг 1:2 состоит из малиновой, тёмно-синей и жёлтой полос.<sup><a href="#src-1">1</a></sup> «Новый герб», утверждённый оккупационной властью в 2024 году, Украина не признаёт.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band band-navy" id="sources">
+  <div class="wrap">
+    <div class="band-head">
+      <div><span class="label">Справка · библиография</span><h2>Источники</h2></div>
+      <p>Номера в тексте ведут сюда. Проверено в ноябре 2026 года.</p>
+    </div>
+    <ol class="sources">
+      <li id="src-1"><a href="https://en.wikipedia.org/wiki/Lysychansk" target="_blank" rel="noopener">Lysychansk</a> <small>Wikipedia, со ссылками на первичные источники</small></li>
+      <li id="src-2"><a href="https://en.wikipedia.org/wiki/Battle_of_Lysychansk" target="_blank" rel="noopener">Battle of Lysychansk</a> <small>Wikipedia</small></li>
+      <li id="src-3"><a href="https://www.ukrinform.ua/rubric-regions/3199616-lisicij-nad-dincem-nasa-zemla.html" target="_blank" rel="noopener">Лисичий над Дінцем. Наша земля</a> <small>Укрінформ</small></li>
+      <li id="src-4"><a href="https://suspilne.media/263777-lisicansk-ricnica-zvilnenna-ta-druga-okupacia-mista/" target="_blank" rel="noopener">Лисичанськ: річниця звільнення та друга окупація міста</a> <small>Суспільне</small></li>
+      <li id="src-5"><a href="https://armyinform.com.ua/2020/07/22/u-czi-dni-2014-roku-ukrayinski-voyiny-zvilnyly-vid-okupantiv-syevyerodoneczk-lysychansk-ta-rubizhne/" target="_blank" rel="noopener">У ці дні 2014 року українські воїни звільнили Сєвєродонецьк, Лисичанськ та Рубіжне</a> <small>АрміяInform</small></li>
+      <li id="src-6"><a href="https://www.pravda.com.ua/eng/news/2022/07/03/7356148/" target="_blank" rel="noopener">Ukrainian Armed Forces withdraw from Lysychansk after heavy fighting</a> <small>Українська правда, 3.07.2022</small></li>
+      <li id="src-7"><a href="https://kyivindependent.com/russia-captures-lysychansk-ukraines-last-major-city-luhansk-oblast" target="_blank" rel="noopener">Russia captures Lysychansk, Ukraine's last major city in Luhansk Oblast</a> <small>The Kyiv Independent</small></li>
+      <li id="src-8"><a href="https://armyinform.com.ua/2025/01/13/vodopostachannya-na-tot-lysychansk-dosi-bez-vody-a-sproby-vidnovlennya-bezrezultatni/" target="_blank" rel="noopener">Лисичанськ досі без води</a> <small>АрміяInform, 13.01.2025</small></li>
+      <li id="src-9"><a href="https://armyinform.com.ua/2025/05/26/pokazove-vidnovlennya-u-lysychansku-okupanty-kynuly-napivrozibranymy-majzhe-100-budynkiv/" target="_blank" rel="noopener">Показове відновлення: окупанти кинули напіврозібраними майже 100 будинків</a> <small>АрміяInform, 26.05.2025</small></li>
+      <li id="src-10"><a href="https://armyinform.com.ua/2025/08/30/okupovanyj-lysychansk-chetvertu-zymu-bez-tepla-roboty-zupyneni-zarplaty-ne-vyplachuyutsya/" target="_blank" rel="noopener">Окупований Лисичанськ: четверту зиму без тепла</a> <small>АрміяInform, 30.08.2025</small></li>
+      <li id="src-11"><a href="https://www.kyivpost.com/uk/post/44713" target="_blank" rel="noopener">Окупанти запустили по селах Луганщини мобільні бригади «паспортизації»</a> <small>Kyiv Post</small></li>
+      <li id="src-12"><a href="https://lis.gov.ua/Documents/Economy/PASPORT%202019.pdf" target="_blank" rel="noopener">Паспорт міста Лисичанськ, 2019</a> <small>Лисичанська міська рада</small></li>
+      <li id="src-13"><a href="https://tribun.com.ua/uk/108781-lysychansk-the-cradle-of-the-industrial-revolution-in-donbas-unveiling-the-origins-and-evolution-of-lysychyi-bayrak" target="_blank" rel="noopener">Лисичанськ — колиска промислової революції на Донбасі</a> <small>Трибун</small></li>
+      <li id="src-14"><a href="https://news.un.org/en/story/2022/10/1129492" target="_blank" rel="noopener">UN General Assembly demands Russia reverse course on 'attempted illegal annexation'</a> <small>UN News, 12.10.2022</small></li>
+    </ol>
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="about">
+      <div class="fbrand"><i></i>ЛИСИЧАНСК</div>
+      <p>Справочный проект об истории города от основания в 1710 году до наших дней. Собрано из открытых источников, у каждого факта есть ссылка.</p>
+    </div>
+    <nav aria-label="Разделы сайта">
+      <h4>Разделы</h4>
+      <ul>
+        <li><a href="#history">История</a></li>
+        <li><a href="#war">Российская агрессия</a></li>
+        <li><a href="#chronicle">Хроника</a></li>
+        <li><a href="#city">Город</a></li>
+        <li><a href="#culture">Культура и память</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Справка">
+      <h4>Справка</h4>
+      <ul>
+        <li><a href="#population">Население</a></li>
+        <li><a href="#economy">Экономика</a></li>
+        <li><a href="#people">Люди</a></li>
+        <li><a href="#symbols">Символы города</a></li>
+        <li><a href="#sources">Источники</a></li>
+      </ul>
+    </nav>
+    <div class="legal">
+      <span>Лисичанск — это Украина</span>
+      <span>Данные проверены в ноябре 2026 года</span>
+    </div>
+  </div>
+</footer>
+
+<a class="to-top" id="toTop" href="#top" aria-label="Наверх"><svg viewBox="0 0 24 24"><path d="M6 14l6-6 6 6"/></svg></a>
+
+<script>
+(function(){
+  var data=[[1926,6624],[1939,26181],[1959,37878],[1970,117752],[1979,119487],[1989,126503],[2001,115229],[2011,105689],[2014,103459],[2022,93340]];
+  var svg=document.getElementById('pop'); if(!svg) return;
+  var W=640,H=300,L=44,R=8,T=26,B=30,max=140000,ns='http://www.w3.org/2000/svg';
+  var cw=(W-L-R)/data.length,bw=cw*.58;
+  function el(n,a,t){var e=document.createElementNS(ns,n);for(var k in a)e.setAttribute(k,a[k]);if(t!=null)e.textContent=t;svg.appendChild(e);return e}
+  function y(v){return T+(H-T-B)*(1-v/max)}
+  [0,40000,80000,120000].forEach(function(v){
+    el('line',{x1:L,x2:W-R,y1:y(v),y2:y(v),stroke:'var(--line)','stroke-width':1});
+    el('text',{x:L-8,y:y(v)+4,'text-anchor':'end'},String(v/1000));
+  });
+  data.forEach(function(d,i){
+    var x=L+i*cw+(cw-bw)/2,peak=d[0]===1989;
+    el('rect',{x:x,y:y(d[1]),width:bw,height:y(0)-y(d[1]),fill:peak?'var(--gold)':'var(--bar)'});
+    el('text',{x:x+bw/2,y:y(d[1])-7,'text-anchor':'middle','class':'v'},(d[1]/1000).toFixed(d[1]<10000?1:0).replace('.',','));
+    el('text',{x:x+bw/2,y:H-B+18,'text-anchor':'middle'},d[0]);
+  });
+})();
+(function(){
+  var links=[].slice.call(document.querySelectorAll('.topnav a')),map={};
+  links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a});
+  if(!('IntersectionObserver' in window)) return;
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.remove('on')});map[e.target.id]&&map[e.target.id].classList.add('on');}})},{rootMargin:'-40% 0px -55% 0px'});
+  Object.keys(map).forEach(function(id){var s=document.getElementById(id);s&&io.observe(s)});
+})();
+(function(){
+  var root=document.documentElement,btn=document.getElementById('themeBtn');
+  try{var t=localStorage.getItem('theme');if(t)root.setAttribute('data-theme',t)}catch(e){}
+  btn&&btn.addEventListener('click',function(){
+    var cur=root.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
+    var next=cur==='dark'?'light':'dark';root.setAttribute('data-theme',next);
+    try{localStorage.setItem('theme',next)}catch(e){}
+  });
+  var menu=document.getElementById('menuBtn'),nav=document.getElementById('topnav');
+  menu&&menu.addEventListener('click',function(){var o=nav.classList.toggle('open');menu.setAttribute('aria-expanded',o)});
+  nav&&nav.addEventListener('click',function(e){if(e.target.tagName==='A'){nav.classList.remove('open');menu&&menu.setAttribute('aria-expanded','false')}});
+  var bar=document.getElementById('progress'),top=document.getElementById('toTop'),tick=false;
+  function upd(){var h=document.documentElement,max=h.scrollHeight-h.clientHeight,y=h.scrollTop||document.body.scrollTop;
+    if(bar)bar.style.transform='scaleX('+(max>0?y/max:0)+')';if(top)top.classList.toggle('show',y>800);tick=false}
+  addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(upd)}},{passive:true});upd();
+})();
+</script>
+
+</body>
+</html>
